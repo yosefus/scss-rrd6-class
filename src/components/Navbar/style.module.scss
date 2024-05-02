@@ -1,0 +1,42 @@
+@import '../../vars';
+
+// nesting
+.header {
+   display: flex;
+   padding: 1rem;
+   background-color: gold;
+
+   &>nav {
+      display: flex;
+      gap: 1rem;
+
+      a {
+
+         &.active {
+            font-weight: 600;
+            text-decoration: underline;
+         }
+
+         &:hover {
+            color: red;
+         }
+      }
+   }
+
+
+   @media (width > $sm) {
+      background-color: $bgColor;
+   }
+
+   @media (width > $md) {
+      background-color: blue;
+
+      &>nav {
+         a{
+            color: red;
+         }
+      }
+   }
+}
+
+

@@ -1,0 +1,36 @@
+@import './vars';
+@import './mixin';
+
+.app {
+   background-color: $bgColor;
+   color: $color ;
+   min-height: 100vh;
+
+   &>p {
+      @include alert(blue);
+      @extend .flex-center;
+   }
+
+   &>button {
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      position: fixed;
+      left: 1rem;
+      bottom: 1rem;
+      background-color: transparent;
+      border: 1px solid $color;
+      color: inherit;
+      font-size: 1.2rem;
+      @extend .flex-center;
+
+      background-color: darkgreen;
+
+      &:hover {
+         background-color: darken($color: darkgreen, $amount: 5%);
+      }
+   }
+}
+
+
